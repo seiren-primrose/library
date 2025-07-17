@@ -1,0 +1,2 @@
+exports.SignalError=class extends Error{};exports.UntrustedIdentityKeyError=class extends exports.SignalError{constructor(a,b){super();this.name="UntrustedIdentityKeyError";this.addr=a;this.identityKey=b}};exports.SessionError=class extends exports.SignalError{constructor(a){super(a);this.name="SessionError"}};exports.MessageCounterError=class extends exports.SessionError{constructor(a){super(a);this.name="MessageCounterError"}};
+exports.PreKeyError=class extends exports.SessionError{constructor(a){super(a);this.name="PreKeyError"}};
